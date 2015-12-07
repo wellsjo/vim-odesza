@@ -19,7 +19,7 @@ syn region odeszaInlineJS start="${" end="}" containedin=odeszaString,odeszaJSTe
 syn region odeszaJSTemplateString start="`" end="`" containedin=odeszaInlineJS contains=odeszaInlineJS
 
 syn keyword odeszaJSKeyword return var containedin=odeszaInlineJS
-syn match odeszaJSOperator "=>\|+\|=" containedin=odeszaInlineJS
+syn match odeszaJSOperator "=>\|="
 
 syn keyword odeszaTodo TODO Todo containedin=odeszaComment
 
@@ -27,9 +27,10 @@ syn match odeszaKeyword /block \w*/
 syn match odeszaKeyword /include \(\w\|\.\|\/\)*/
 syn match odeszaKeyword /extends \(\w\|\.\|\/\)*/
 syn keyword odeszaKeyword endblock
+hi def link odeszaKeyword Statement
 
-syn match odeszaSymbol "${"
-syn match odeszaSymbol "}"
+syn match odeszaSymbol "${\|}"
+hi def link odeszaSymbol Statement
 
 hi def link odeszaJSTemplateString String
 hi def link odeszaJSOperator Operator
@@ -39,7 +40,5 @@ hi def link odeszaNumber Number
 hi def link odeszaTodo Todo
 hi def link odeszaComment Comment
 hi def link odeszaString String
-hi def link odeszaSymbol Statement
-hi def link odeszaKeyword Statement
 
 let b:current_syntax = "odesza"
