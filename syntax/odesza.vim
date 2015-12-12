@@ -22,7 +22,7 @@ syn match odeszaComment /\/\/.*$/
 syn keyword odeszaTodo TODO Todo contained containedin=odeszaComment
 
 syn match odeszaKeyword /extends \(\w\|\.\|\/\)*/
-syn match odeszaKeyword /\(block\|inclde\) \w*/
+syn match odeszaKeyword /\(block\|include\) \w*/
 syn keyword odeszaKeyword endblock
 hi def link odeszaKeyword Statement
 
