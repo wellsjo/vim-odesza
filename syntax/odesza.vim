@@ -7,17 +7,22 @@ if exists("b:current_syntax")
   finish
 endif
 
+" include javascript syntax file
 syn include @JavaScript syntax/javascript.vim
 
-syn region odeszaInlineJS start="${" end="}$" contains=@JavaScript,odeszaJSTemplateString
+" inline js
+syn region odeszaInlineJS start="${" end="}$" contains=@JavaScript
 
+" strings
 syn region odeszaString start=/"/ end=/"/
 syn region odeszaString start=/\'/ skip=/\\'/ end=/\'/
 
+" comments
 syn region odeszaComment start="\/\*\*" end="\\*/"
 syn match odeszaComment /\/\/.*$/
 syn keyword odeszaTodo TODO Todo contained containedin=odeszaComment
 
+" keywords
 syn match odeszaKeyword /extends \(\w\|\.\|\/\)*/
 syn match odeszaKeyword /\(block\|include\) \w*/
 syn keyword odeszaKeyword endblock
