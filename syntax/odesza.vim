@@ -7,15 +7,12 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn region odeszaInlineJS start="${" end="}" contains=odeszaString,odeszaJSTemplateString
-syn keyword odeszaJSKeyword if else in typeof return with continue break while let try catch for contained containedin=odeszaInlineJS
-syn match odeszaJSNumber "[0-9]" contained containedin=odeszaInlineJS
-syn match odeszaJSOperator "=>\|=" contained containedin=odeszaInlineJS
+syn include @JavaScript syntax/javascript.vim
 
-syn region odeszaString start=/"/ end=/"/ contains=odeszaInlineJS
-syn region odeszaString start=/\'/ skip=/\\'/ end=/\'/ contains=odeszaInlineJS
+syn region odeszaInlineJS start="${" end="}$" contains=@JavaScript,odeszaJSTemplateString
 
-syn region odeszaJSTemplateString start="`" end="`" contains=odeszaInlineJS
+syn region odeszaString start=/"/ end=/"/
+syn region odeszaString start=/\'/ skip=/\\'/ end=/\'/
 
 syn region odeszaComment start="\/\*\*" end="\\*/"
 syn match odeszaComment /\/\/.*$/

@@ -1,0 +1,8 @@
+extends base
+
+block content
+  <h1>Video List</h1>
+  <ul>
+    ${videos.map(v => `<li>${v.title}</li>`).join('')}
+  </ul>
+endblock

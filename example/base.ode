@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>${title}</title>
+  </head>
+  <body>
+    <div class="page-content">
+      block content
+    </div>
+  </body>
+</html>
