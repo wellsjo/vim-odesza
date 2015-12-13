@@ -8,14 +8,14 @@
 " TODO:
 "  - Add the HTML syntax inside the JSDoc
 
-if !exists("main_syntax")
-  if version < 600
-    syntax clear
-  elseif exists("b:current_syntax")
-    finish
-  endif
-  let main_syntax = 'javascript'
-endif
+" if !exists("main_syntax")
+"   if version < 600
+"     syntax clear
+"   elseif exists("b:current_syntax")
+"     finish
+"   endif
+"   let main_syntax = 'javascript'
+" endif
 
 "" Drop fold if it set but VIM doesn't support it.
 let b:javascript_fold='true'
@@ -238,9 +238,9 @@ endif
 syntax cluster  htmlJavaScript contains=@javaScriptAll,javaScriptBracket,javaScriptParen,javaScriptBlock,javaScriptParenError
 syntax cluster  javaScriptExpression contains=@javaScriptAll,javaScriptBracket,javaScriptParen,javaScriptBlock,javaScriptParenError,@htmlPreproc
 
-let b:current_syntax = "javascript"
-if main_syntax == 'javascript'
-  unlet main_syntax
-endif
+" let b:current_syntax = "javascript"
+" if main_syntax == 'javascript'
+"   unlet main_syntax
+" endif
 
 " vim: ts=4
