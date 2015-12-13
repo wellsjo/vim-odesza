@@ -11,7 +11,7 @@ endif
 syn include @JavaScript syntax/javascript.vim
 
 " inline js
-syn region odeszaInlineJS start="${" end="}"
+syn region odeszaInlineJS start="${" end="}" contains=@JavaScript
 
 " strings
 syn region odeszaString start=/"/ end=/"/
