@@ -8,7 +8,7 @@ if exists("b:current_syntax")
 endif
 
 " include javascript syntax file
-syn include @JavaScript syntax/javascript.vim
+syn include @JavaScript syntax/js.vim
 
 " inline js
 syn region odeszaInlineJS start="${" end="}" contains=@JavaScript
