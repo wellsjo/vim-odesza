@@ -12,7 +12,7 @@ endif
 syn include @JavaScript syntax/odeszajs.vim
 
 " Inline JavaScript
-syn region odeszaInlineJS start="${" end="}" containedin=odeszaString contains=@JavaScript,odeszaInlineJS
+syn region odeszaInlineJS start="${" end="}" containedin=odeszaString contains=@JavaScript,odeszaInlineJS,odeszaString
 
 " Strings
 syn region odeszaString start=/"/ skip=/\\"/ end=/"/
